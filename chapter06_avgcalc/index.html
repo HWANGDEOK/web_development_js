@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>평균값 계산기 만들기</title>
+  <script>
+    // let value1 = prompt('1번 숫자를 입력해주세요.');
+    // let value2 = prompt('2번 숫자를 입력해주세요.');
+
+    <!-- value1에 4, value2에 5 입력했을 때 alert으로 9가 출력되도록 코드를 작성하시오.-->
+    // alert(Number(value1) + Number(value2));
+
+    // 합 말고 평균을 내보세요. -> 평균값 alert으로 나오도록 작성하시오.
+    // value1 = 80, vlaue2 = 78
+    // alert((Number(value1) + Number(value2)) / 2)
+
+    // 10개 짜리 클린코드
+    // let sum=0;
+    // let num;
+    // let cnt=0
+    // for(let i=1; i<11; i++){
+    //   num = prompt(`${i}번 숫자를 입력해주세요.`);
+    //   sum+=Number(num);
+    // }
+    // let avg = sum/10;
+    // alert(avg);
+
+    // 이상의 코드의 아쉬운 점은 5개의 숫자만 입력받고자 하는 경우에 반복문 내와 alert부분을 두 번 수정해야 한다는 점입니다. 이러한 하드코딩을 수정하기 위해서
+    // let totalNumber = 3;
+    // let sum  = 0;
+    // for(let i=1; i<totalNumber+1; i++){
+    // num = prompt(`${i}번 숫자를 입력해주세요.`);
+    // sum+=Number(num);
+    // }
+    // alert(sum/totalNumber);
+    
+    // 그런데 이상의 코드도 totalNumber라는 변수를 매번 수정해줘야 하기 때문에 몇 번 돌아가는지 브라우저에서 확인할 수 없다는 단점이 있습니다. 그래서 아예 시작할 때 숫자가 몇 개 인지 물어보도록 코드를 수정하도록 하겠습니다.
+
+    // let totalNumber = Number(prompt('숫자를 몇 번 입력하시겠습니까'));
+    // let sum  = 0;
+    // for(let i=1; i<totalNumber+1; i++){
+    // num = prompt(`${i}번 숫자를 입력해주세요.`);
+    // sum+=Number(num);
+    // }
+    // alert(`평균값: ${sum/totalNumber}`);
+
+    // while문으로 체질 개선하시오.
+    let totalNumber = Number(prompt('숫자를 몇 번 입력하시겠습니까'));
+    let num;
+    let sum=0;
+    let i=1;
+    while(i<totalNumber+1){
+      num = Number(prompt(`${i}번 숫자를 입력해주세요.`));
+      sum+=num;
+      i++;
+    }
+    alert(`평균값: ${sum/totalNumber}`);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
