@@ -1,9 +1,9 @@
 .div-scoreboard {
   width: 400px;
-  background-color: #009f48;
+  background-color:  #009f48;;
   text-align: center;
   padding: 2px;
-  color: #fff;
+  color: #fff
 }
 
 .div-scoreboard.inner {
@@ -13,7 +13,7 @@
 }
 
 .div-shots-left {
-  margin-left: 10px;
+  margin-top: 10px;
 }
 
 #shots-left {
@@ -40,7 +40,7 @@
   width: 100%;
   line-height: 40px;
   padding-top: 5px;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 #text {
@@ -63,7 +63,7 @@ button {
   background-color: #525252;
   text-align: center;
   padding: 2px;
-  color: #fff;
+  color: #fff
 }
 
 .div-control-name {
