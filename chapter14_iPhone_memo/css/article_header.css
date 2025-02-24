@@ -1,4 +1,4 @@
-.main-header{
+.main-header {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -7,22 +7,22 @@
   width: 100%;
 }
 
-.back-button{
+.back-button {
   width: 50px;
-  & > svg{
+  & > svg {
     width: 30px;
     height: 30px;
     fill: #ff9d00;
   }
 }
 
-.main-header-title{
+.main-header-title {
   margin: 0;
   color: #eeeeee;
   cursor: default;
 }
 
-.write-submit-button{
+.write-submit-button {
   width: 50px;
   font-size: 18px;
   color: #ff9d00;

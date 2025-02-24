@@ -6,25 +6,25 @@ let boardInputDatas = {
 };
 
 function setInputsEvent(){
-  const titleInput = document.querySelector(`.main-article > input:nth-of-type(1)`);
-  const contentInput = document.querySelector(`.main-article > textarea`);
-  const writerInput = document.querySelector(`.main-article > input:nth-of-type(2)`);
-  titleInput.onkeyup = handleBoardInputChange;
-  contentInput.onkeyup = handleBoardInputChange;
-  writerInput.onkeyup = handleBoardInputChange;
+  const titleInput = document.querySelector('.main-article > input:nth-of-type(1)');
+  const contentInput = document.querySelector('.main-article > textarea');
+  const writerInput = document.querySelector('.main-article > input:nth-of-type(2)');
+  titleInput.onkeyup = handleBoardInputOnChange;
+  contentInput.onkeyup = handleBoardInputOnChange;
+  writerInput.onkeyup = handleBoardInputOnChange;
 }
 
-function setButtonEvent(){
+function setButtonEvent() {
   const submitButton = document.querySelector('.write-submit-button');
   submitButton.onclick = handleSubmitOnClick;
 }
 
-function handleBoardInputChange(){
+function handleSubmitOnClick() {
   saveBoard();
-  clear()
+  clear();
 }
 
-function handleBoardInputChange(e){
+function handleBoardInputOnChange(e){
   boardInputDatas={
     ...boardInputDatas,
     [e.target.name]: e.target.value,
@@ -33,7 +33,7 @@ function handleBoardInputChange(e){
 
 
 function saveBoard(){
-  let boardInputDatas = !!localStorage.getItem('boardDatas')
+  let boardDatas = !!localStorage.getItem('boardDatas')
   ? JSON.parse(localStorage.getItem('boardDatas'))
   : [];
 
@@ -57,7 +57,7 @@ function clear(){
   const contentInput = document.querySelector(`.main-article > textarea`);
   const writerInput = document.querySelector(`.main-article > input:nth-of-type(2)`);
   const inputs = [titleInput, contentInput, writerInput];
-  inputs.forEach(input => input.value='')
+  inputs.forEach(input => input.value="");
 
   boardInputDatas = {
     title: "",
